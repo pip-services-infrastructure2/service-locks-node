@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+
+  test:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: ${IMAGE:-pipdevs/app}
+    environment:
+      - HTTP_ENABLED=true
+      - GRPC_ENABLED=true
+      - EMAIL_DISABLED=true
+    ports:
+      - "8080:8080"
+      - "8090:8090"
