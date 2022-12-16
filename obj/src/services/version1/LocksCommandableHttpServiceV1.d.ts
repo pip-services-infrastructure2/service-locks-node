@@ -1,4 +1,4 @@
 import { CommandableHttpService } from 'pip-services3-rpc-nodex';
-export declare class LocksHttpServiceV1 extends CommandableHttpService {
+export declare class LocksCommandableHttpServiceV1 extends CommandableHttpService {
     constructor();
 }

@@ -47,7 +47,7 @@
     port: {{HTTP_PORT}}{{#unless HTTP_PORT}}8080{{/unless}}
 
 # HTTP Service V1
-- descriptor: "service-locks:service:http:default:1.0"
+- descriptor: "service-locks:service:commandable-http:default:1.0"
   swagger:
     enable: true
     auto: true

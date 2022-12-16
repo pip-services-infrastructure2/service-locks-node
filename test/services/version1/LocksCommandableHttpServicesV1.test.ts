@@ -7,17 +7,17 @@ import { References } from 'pip-services3-commons-nodex';
 
 import { LocksMemoryPersistence } from '../../../src/persistence/LocksMemoryPersistence';
 import { LocksController } from '../../../src/logic/LocksController';
-import { LocksHttpServiceV1 } from '../../../src/services/version1/LocksHttpServiceV1';
+import { LocksCommandableHttpServiceV1 } from '../../../src/services/version1/LocksCommandableHttpServiceV1';
 
 
 let LOCK1: string = "lock_1";
 let LOCK2: string = "lock_2";
 let LOCK3: string = "lock_3";
 
-suite('LocksHttpServiceV1', () => {
+suite('LocksCommandableHttpServiceV1', () => {
     let persistence: LocksMemoryPersistence;
     let controller: LocksController;
-    let service: LocksHttpServiceV1;
+    let service: LocksCommandableHttpServiceV1;
     let rest: any;
     let client_id: string;
     let admin_id: string;
@@ -38,7 +38,7 @@ suite('LocksHttpServiceV1', () => {
             'options.release_admin_id', admin_id
         ));
 
-        service = new LocksHttpServiceV1();
+        service = new LocksCommandableHttpServiceV1();
         service.configure(ConfigParams.fromTuples(
             'connection.protocol', 'http',
             'connection.port', 3000,

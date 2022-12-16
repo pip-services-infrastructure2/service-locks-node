@@ -1,1 +1,1 @@
-export { LocksHttpServiceV1 } from './LocksHttpServiceV1';
+export { LocksCommandableHttpServiceV1 as LocksHttpServiceV1 } from './LocksCommandableHttpServiceV1';
