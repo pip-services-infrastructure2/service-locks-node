@@ -6,11 +6,10 @@ services:
     build:
       context: ..
       dockerfile: docker/Dockerfile.test
-    image: ${IMAGE:-pipdevs/test}
+    image: ${IMAGE:-pipservices/test}
     links:
       - mongo
     environment:
-      - MONGO_ENABLED=true 
       - MONGO_SERVICE_HOST=mongo
       - MONGO_SERVICE_PORT=27017
       - MONGO_DB=test
